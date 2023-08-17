@@ -26,10 +26,14 @@ app.get("/",(req,res) => {
     // res.download("package.json")
 })
 
+app.use(express.json());
+
+app.use("/blogs", require("./routes/blogs"))
+app.use("/users", require("./routes/users"))
 
 //to make our server run
-app.listen(3003,()=>{
-    console.log("This app is listening on port ",3003);
+app.listen(3010,()=>{
+    console.log("This app is listening on port ",3010);
 })
 
 
