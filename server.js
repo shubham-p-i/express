@@ -26,6 +26,8 @@ app.get("/",(req,res) => {
     // res.download("package.json")
 })
 
+//express by default doesnt allow us to access the body of req
+//we need to use this middleware to access req body 
 //to get json data passed by client with post/put/patch requests
 app.use(express.json());
 
