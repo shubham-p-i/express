@@ -26,6 +26,7 @@ app.get("/",(req,res) => {
     // res.download("package.json")
 })
 
+//to get json data passed by client with post/put/patch requests
 app.use(express.json());
 
 app.use("/blogs", require("./routes/blogs"))
