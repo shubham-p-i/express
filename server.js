@@ -26,6 +26,19 @@ app.get("/",(req,res) => {
     // res.download("package.json")
 })
 
+app.get("/home/:id", (req, res)=>{
+
+    console.log("--------------------------------------------------------------")
+
+    console.log('id:',  req.params.id);
+    console.log('firstname:',  req.query.firstname);
+    console.log('lastname:',  req.query.lastname);
+    console.log('desig:',  req.query.desig);
+    console.log('query:',  req.query);
+
+    res.json({id:req.params.id, firstname:req.query.firstname, lastname:req.query.lastname, desig :req.query.desig});
+})
+
 //express by default doesnt allow us to access the body of req
 //we need to use this middleware to access req body 
 //to get json data passed by client with post/put/patch requests
