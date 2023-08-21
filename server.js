@@ -29,6 +29,7 @@ app.get("/",(req,res) => {
 app.get("/home/:id", (req, res)=>{
 
     console.log("--------------------------------------------------------------")
+    //http://localhost:3010/home/1099?firstname=Shubham&lastname=Patil&desig=SD
 
     console.log('id:',  req.params.id);
     console.log('firstname:',  req.query.firstname);
